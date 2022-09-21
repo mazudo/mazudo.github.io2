@@ -31,6 +31,13 @@
             text-align: right;
         }
 
+
+        img {
+            display: block;
+            width: 50%;
+            margin: auto;
+        }
+
         h3,
         h4 {
             color: aqua;
@@ -50,15 +57,38 @@
         td {
             border: 1px solid black;
         }
+
+        #special-red {
+            color: rgb(235, 11, 223);
+        }
+
+        .generic-red {
+            color: red;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <ul>
+        <ul class="nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
         </ul>
+
+        <p id="special-red">paragraph 1</p>
+        <p id="special-red">paragraph 2</p>
+        <p id="special-red">pragraph 3</p>
+        <p class="generic-red">paragraph 4</p>
+
+        <img src="images/poker Copy.jfif" alt="poker with space">
+        <br>
+        <img src="images/poker.jfif" alt="poker">
+        <br>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-qiS6Epw6uU" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         <h1>Today we will learn about adding style via CSS!</h1>
         <h2>1. This is how we add style with inline</h2>
         <p style="color:seagreen;">This is a seagreen paragraph</p>
