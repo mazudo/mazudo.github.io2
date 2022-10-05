@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Demo</title>
+</head>
+
+<body>
+    <h1>let's learn javascript!</h1>
+    <h2>How do we do onclick events and alerts?</h2>
+    <a href="https://eastsideprep.org" target="_blank"
+        onclick="alert('Warning! you are navigiating away from my page!')">school website</a>
+
+    <hr>
+    <h2>What's my secret identity?</h2>
+    <p id="secret"></p>
+    <button
+        onclick="document.getElementById('secret').innerHTML='Nana nana nana nana, Batman!'; document.getElementById('secret').style.display='block'">Reveal!</button>
+    <button onclick="document.getElementById('secret').style.display='none'">Hide!</button>
+
+    <!--student challenge: two truths and a lie-->
+
+    <hr>
+    <h2>How do we change images with javascript?</h2>
+    <img src="images/pic_bulboff.gif" alt="light bulb" id="my-image">
+    <button onclick="document.getElementById('my-image').src='images/pic_bulbon.gif'">Turn on light</button>
+    <!-- student challenge: toggle back to original image-->
+    <button>Turn off light</button>
+
+    <hr>
+    <h2>How do I change css styles with a button?</h2>
+    <p id="alice">Hi. I am Alice.</p>
+    <button
+        onclick="document.getElementById('alice').style.color='blue'; document.getElementById('alice').style.fontSize='5px'">Cake:
+        Eat me</button>
+    <!--student challenge: change to red and increase font size to 40px-->
+    <button>Potion: Drink me</button>
+    <!--add another button to return Alice to original font size and color, using a function-->
+    <button onclick="normalAlice();">Return to normal</button>
+
+    <hr>
+    <h2>How do we return user input data?</h2>
+    <button onclick="askName();">What's your name?</button>
+    <p id="ask-name"></p>
+
+    <script>
+        function normalAlice() {
+            let aliceParagraph = document.getElementById('alice');
+            aliceParagraph.style.color = 'black';
+            aliceParagraph.style.fontSize = '20px';
+        }
+
+        function askName() {
+            let nameParagraph = document.getElementById('ask-name');
+            let name = prompt("What is your name?");
+            // decide what to do
+            if (name === "batman") {
+                nameParagraph.innerHTML = "Welcome to the batcave sir.";
+            } else {
+                nameParagraph.innerHTML = "Hello " + name + "! Nice to meet you."
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
