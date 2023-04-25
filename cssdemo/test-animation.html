@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+        #animationp {
+            animation: move_left_to_right 5s linear infinite
+        }
+
+        @keyframes move_left_to_right {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        #moving-image {
+            animation: move_then_fade 5s linear forwards;
+            width: 30%;
+        }
+
+        @keyframes move_then_fade {
+            0% {
+                transform: traslateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <p id="animationp">This will move left to right</p>
+
+    <img id="moving-image" src="images/Terry-Puppy.jpg" alt="Terry and puppy">
+
+</body>
+
+</html>
